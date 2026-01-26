@@ -1,6 +1,6 @@
-"""Package initialization module for package-name-goes-here."""
+"""marimo-utils-sn package."""
 
-
-def main() -> None:
-    """Print a greeting message."""
-    print("Hello from package-name-goes-here!")  # noqa: T201
+__all__ = [
+    "notebook_dir_unwrap",
+]
+from ._notebook_dir import notebook_dir_unwrap

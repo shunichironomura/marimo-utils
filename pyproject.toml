@@ -7,7 +7,9 @@ requires-python = ">=3.13"
 authors = [
   { name = "Shunichiro Nomura", email = "nomura@space.t.u-tokyo.ac.jp" },
 ]
-dependencies = []
+dependencies = [
+    "marimo>=0.19.6",
+]
 
 [dependency-groups]
 dev = [
