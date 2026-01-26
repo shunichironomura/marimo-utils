@@ -1,16 +1,13 @@
 [project]
-name = "package-name-goes-here"
-version = "0.1.0"
-description = "Add your description here"
+name = "marimo-utils-sn"
+version = "0.0.1a1"
+description = "Utility library for marimo notebooks."
 readme = "README.md"
 requires-python = ">=3.13"
 authors = [
   { name = "Shunichiro Nomura", email = "nomura@space.t.u-tokyo.ac.jp" },
 ]
 dependencies = []
-
-[project.scripts]
-package-name-goes-here = "package_name_goes_here:main"
 
 [dependency-groups]
 dev = [
@@ -25,8 +22,6 @@ test = [
   # "coverage>=7.8.2", # If you use coverage
 ]
 typing = [
-  "basedpyright>=1.36.2",
-  "mypy>=1.16.1",
   "ty>=0.0.8",
   { include-group = "test" },
 ]
@@ -34,9 +29,6 @@ typing = [
 [build-system]
 requires = ["uv_build>=0.9,<0.10"]
 build-backend = "uv_build"
-
-[tool.mypy]
-strict = true
 
 [tool.pytest]
 addopts = [
