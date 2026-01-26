@@ -17,7 +17,6 @@ concurrency:
 
 jobs:
   ruff:
-    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -37,52 +36,7 @@ jobs:
       - name: Run ruff
         run: uv run -- ruff check
 
-  mypy:
-    if: github.event.pull_request.draft == false
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          version: ${{ env.UV_VERSION }}
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version-file: .python-version
-
-      - name: Install the project
-        run: uv sync --no-dev --group typing
-
-      - name: Run mypy
-        run: uv run -- mypy .
-
-  basedpyright:
-    if: github.event.pull_request.draft == false
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          version: ${{ env.UV_VERSION }}
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version-file: .python-version
-
-      - name: Install the project
-        run: uv sync --no-dev --group typing
-
-      - name: Run pyright
-        run: uv run -- basedpyright .
-
   ty:
-    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -100,7 +54,6 @@ jobs:
         run: uv run -- ty check
 
   pytest:
-    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
 
     steps:
@@ -140,7 +93,6 @@ jobs:
       #     push: "origin HEAD:${{ github.head_ref }} --force"
 
   markdownlint:
-    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -155,8 +107,7 @@ jobs:
         run: markdownlint .
 
   collect:
-    if: github.event.pull_request.draft == false
-    needs: [ruff, mypy, pytest, basedpyright, ty, markdownlint]
+    needs: [ruff, ty, pytest, markdownlint]
     runs-on: ubuntu-latest
     steps:
       - name: Collect results

@@ -110,6 +110,53 @@ wheels = [
 ]
 
 [[package]]
+name = "marimo-utils-sn"
+version = "0.1.0"
+source = { editable = "." }
+
+[package.dev-dependencies]
+dev = [
+    { name = "basedpyright" },
+    { name = "mypy" },
+    { name = "pre-commit" },
+    { name = "pytest" },
+    { name = "ruff" },
+    { name = "ty" },
+]
+ruff = [
+    { name = "ruff" },
+]
+test = [
+    { name = "pytest" },
+]
+typing = [
+    { name = "basedpyright" },
+    { name = "mypy" },
+    { name = "pytest" },
+    { name = "ty" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "basedpyright", specifier = ">=1.36.2" },
+    { name = "mypy", specifier = ">=1.16.1" },
+    { name = "pre-commit", specifier = ">=4.2.0" },
+    { name = "pytest", specifier = ">=9.0.0" },
+    { name = "ruff", specifier = ">=0.11.13" },
+    { name = "ty", specifier = ">=0.0.8" },
+]
+ruff = [{ name = "ruff", specifier = ">=0.11.13" }]
+test = [{ name = "pytest", specifier = ">=9.0.0" }]
+typing = [
+    { name = "basedpyright", specifier = ">=1.36.2" },
+    { name = "mypy", specifier = ">=1.16.1" },
+    { name = "pytest", specifier = ">=9.0.0" },
+    { name = "ty", specifier = ">=0.0.8" },
+]
+
+[[package]]
 name = "mypy"
 version = "1.19.1"
 source = { registry = "https://pypi.org/simple" }
@@ -168,53 +215,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/ba/97/88b4254a2ff93ed2eaed725f77b7d3d2d8d7973bf134359ce786db894faf/nodejs_wheel_binaries-24.13.0-py2.py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:9ad6383613f3485a75b054647a09f1cd56d12380d7459184eebcf4a5d403f35c", size = 62244373, upload-time = "2026-01-14T11:05:23.987Z" },
     { url = "https://files.pythonhosted.org/packages/4e/c3/0e13a3da78f08cb58650971a6957ac7bfef84164b405176e53ab1e3584e2/nodejs_wheel_binaries-24.13.0-py2.py3-none-win_amd64.whl", hash = "sha256:605be4763e3ef427a3385a55da5a1bcf0a659aa2716eebbf23f332926d7e5f23", size = 41345528, upload-time = "2026-01-14T11:05:27.67Z" },
     { url = "https://files.pythonhosted.org/packages/a3/f1/0578d65b4e3dc572967fd702221ea1f42e1e60accfb6b0dd8d8f15410139/nodejs_wheel_binaries-24.13.0-py2.py3-none-win_arm64.whl", hash = "sha256:2e3431d869d6b2dbeef1d469ad0090babbdcc8baaa72c01dd3cc2c6121c96af5", size = 39054688, upload-time = "2026-01-14T11:05:30.739Z" },
-]
-
-[[package]]
-name = "package-name-goes-here"
-version = "0.1.0"
-source = { editable = "." }
-
-[package.dev-dependencies]
-dev = [
-    { name = "basedpyright" },
-    { name = "mypy" },
-    { name = "pre-commit" },
-    { name = "pytest" },
-    { name = "ruff" },
-    { name = "ty" },
-]
-ruff = [
-    { name = "ruff" },
-]
-test = [
-    { name = "pytest" },
-]
-typing = [
-    { name = "basedpyright" },
-    { name = "mypy" },
-    { name = "pytest" },
-    { name = "ty" },
-]
-
-[package.metadata]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "basedpyright", specifier = ">=1.36.2" },
-    { name = "mypy", specifier = ">=1.16.1" },
-    { name = "pre-commit", specifier = ">=4.2.0" },
-    { name = "pytest", specifier = ">=9.0.0" },
-    { name = "ruff", specifier = ">=0.11.13" },
-    { name = "ty", specifier = ">=0.0.8" },
-]
-ruff = [{ name = "ruff", specifier = ">=0.11.13" }]
-test = [{ name = "pytest", specifier = ">=9.0.0" }]
-typing = [
-    { name = "basedpyright", specifier = ">=1.36.2" },
-    { name = "mypy", specifier = ">=1.16.1" },
-    { name = "pytest", specifier = ">=9.0.0" },
-    { name = "ty", specifier = ">=0.0.8" },
 ]
 
 [[package]]
