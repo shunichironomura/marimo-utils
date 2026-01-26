@@ -1,6 +1,6 @@
 [project]
 name = "marimo-utils-sn"
-version = "0.1.0"
+version = "0.0.1a1"
 description = "Utility library for marimo notebooks."
 readme = "README.md"
 requires-python = ">=3.13"
