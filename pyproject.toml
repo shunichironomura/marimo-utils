@@ -1,6 +1,6 @@
 [project]
 name = "marimo-utils-sn"
-version = "0.0.1a1"
+version = "0.0.1a2"
 description = "Utility library for marimo notebooks."
 readme = "README.md"
 requires-python = ">=3.13"
@@ -8,7 +8,7 @@ authors = [
   { name = "Shunichiro Nomura", email = "nomura@space.t.u-tokyo.ac.jp" },
 ]
 dependencies = [
-    "marimo>=0.19.6",
+  "marimo>=0.19.6",
 ]
 
 [dependency-groups]
